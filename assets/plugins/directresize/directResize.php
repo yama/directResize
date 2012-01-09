@@ -376,11 +376,11 @@ class directResize {
 		}
 		
 		preg_match("/height *(:|=) *[\"']* *\d+ *[\"']*/",$img,$array);	
-		$imgHTMLHeight = ereg_replace("[^0123456789]","",$array[0]);
+		$imgHTMLHeight = preg_replace('@[^0123456789]@','',$array[0]);
 		if ($imgHTMLHeight>0) $this->imgHTMLHeight = $imgHTMLHeight;
 		
 		preg_match("/width *(:|=) *[\"']* *\d+ *[\"']*/",$img,$array);
-		$imgHTMLWidth = ereg_replace("[^0123456789]","",$array[0]);	
+		$imgHTMLWidth = preg_replace('@[^0123456789]@','',$array[0]);	
 		if ($imgHTMLWidth>0) $this->imgHTMLWidth = $imgHTMLWidth;
 		
 		if ($imgHTMLHeight>0 && $imgHTMLWidth>0) 
@@ -456,8 +456,8 @@ class directResize {
 		
 		for($n=0;$n<count($imgs[0]);$n++){
 	
-			$currentImgPath = eregi_replace("^.+src=('|\")","",$imgs[0][$n]);
-			$currentImgPath = eregi_replace("('|\").*$","",$currentImgPath);
+			$currentImgPath = preg_replace("@^.+src=('|\")@i",'',$imgs[0][$n]);
+			$currentImgPath = preg_replace("@('|\").*$@i",'',$currentImgPath);
 			$currentImgPath = str_replace($modx->config[site_url], "", $currentImgPath);
 			$currentImgPath = urldecode($currentImgPath);
 
@@ -479,7 +479,7 @@ class directResize {
 					$imgf =$imgs[0][$n];
 
 					preg_match("/^.+(src|Src|SRC)=('|\")/",$imgf,$lien_g);
-					$imgf = eregi_replace("^.+src=('|\")","",$imgf);
+					$imgf = preg_replace("@^.+src=('|\")@i",'',$imgf);
 					preg_match("/('|\").*$/",$imgf,$lien_d);
 					
 					// Генеруем тумбу
@@ -582,8 +582,8 @@ class directResize {
 			preg_match("/(".$attr_v.") *= *[\"|'][^\"']*[\"']/",$tpl,$array);	
 			if (!empty($array[0]))
 			{
-				$tmp = eregi_replace($attr_k." *= *[\"|']","",$array[0]);
-				$tmp = eregi_replace("[\"']*","",$tmp);
+				$tmp = preg_replace('@' . $attr_k . " *= *[\"|']@i",'',$array[0]);
+				$tmp = preg_replace("@[\"']*@i",'',$tmp);
 				$tpldata[$attr_k] = trim($tmp);
 				
 			}
@@ -793,15 +793,15 @@ function ConvertFromBackend($o, $escape= true)
 	preg_match_all($reg, $o, $imgs, PREG_PATTERN_ORDER);
 	for($n=0;$n<count($imgs[0]);$n++)
 	{
-		$lien_img = eregi_replace("^.+src=('|\")","",$imgs[0][$n]);
-		$lien_img = eregi_replace("('|\").*$","",$lien_img);
+		$lien_img = preg_replace("@^.+src=('|\")@i",'',$imgs[0][$n]);
+		$lien_img = preg_replace("@('|\").*$@i",'',$lien_img);
 		$lien_img = str_replace($modx->config[site_url], "", $lien_img);
 		$lien_img = urldecode($lien_img);
 		$lien_img = str_replace("---", "://", $lien_img);
 		$lien_img = str_replace("--", "/", $lien_img);
 		$imgf = $imgs[0][$n];
 		preg_match("/^.+(src|Src|SRC)=('|\")/",$imgf,$lien_g);
-		$imgf = eregi_replace("^.+src=('|\")","",$imgf);				
+		$imgf = preg_replace("@^.+src=('|\")@i",'',$imgf);				
 		preg_match("/('|\").*$/",$imgf,$lien_d);
 		
 		$thumbImgTag = $lien_g[0].$lien_img.$lien_d[0];

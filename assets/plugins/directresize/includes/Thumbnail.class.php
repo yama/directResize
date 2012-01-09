@@ -675,7 +675,7 @@ class DRThumbnail {
     	while ($string_tmp!='') {
     		$character=substr ($string_tmp, 0, 1);
     		$string_tmp=substr ($string_tmp, 1);
-    		if (eregi("[abcdefghijklmnopqrstuvwxyz0-9]", $character)) {
+    		if (preg_match('@[abcdefghijklmnopqrstuvwxyz0-9]@', $character)) {
     			$name=$name.$character;
     		} else {
     			$name=$name.'_';
