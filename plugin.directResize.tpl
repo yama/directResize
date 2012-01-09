@@ -17,7 +17,7 @@ switch ($e->name) {
 	break;
 		
 	case "OnDocFormPrerender":
-		// Ïëàãèí èíèöèèðóåòñÿ òîëüêî â âèçóàëüíîì ðåäàêòîðå. Áåç ðåäàêòîðà çàìåíû áîëüøèõ êàðòèíîê íà ïðåâüþ íåò
+		// ÐŸÐ»Ð°Ð³Ð¸Ð½ Ð¸Ð½Ð¸Ñ†Ð¸Ð¸Ñ€ÑƒÐµÑ‚ÑÑ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð² Ð²Ð¸Ð·ÑƒÐ°Ð»ÑŒÐ½Ð¾Ð¼ Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¾Ñ€Ðµ. Ð‘ÐµÐ· Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¾Ñ€Ð° Ð·Ð°Ð¼ÐµÐ½Ñ‹ Ð±Ð¾Ð»ÑŒÑˆÐ¸Ñ… ÐºÐ°Ñ€Ñ‚Ð¸Ð½Ð¾Ðº Ð½Ð° Ð¿Ñ€ÐµÐ²ÑŒÑŽ Ð½ÐµÑ‚
 		if (($modx->config[which_editor] != "none" && empty($_POST)) || (isset($_POST[which_editor]) && $_POST[which_editor]!="none"))
 		{		
 			$content['content'] = RenderOnFrontend($content['content'], $config);

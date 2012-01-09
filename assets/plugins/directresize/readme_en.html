@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>DirectResize</title>
 <style type="text/css">
 <!--
@@ -68,11 +68,11 @@ td
 	<li>Support       for JPG and PNG files (GIF is not currently supported) </li>
 </ul>
 <h3>How  it works</h3>
-<p>First of all this plugin is intended for using with the WYSIWYG-editor and the target audience of plugin users is the clients who doesn’t have any  knowledges in web-development and HTML and who needs to use images in the text  with thumbnails. It would be rather uneasy to explain such man that firstly it  is necessary to create the reduced copy of the image, then to insert it into  the document through the WYSIWYG-editor and after it to make a hyperlink to the  big image.</p>
-<p> So the actions have been simpified to the minimum – when the big image  is inserted to the text and the sizes of the thumbnail are established the  plugin will create automatically the thumbnail with needed hyperlinks.</p>
+<p>First of all this plugin is intended for using with the WYSIWYG-editor and the target audience of plugin users is the clients who doesnвЂ™t have any  knowledges in web-development and HTML and who needs to use images in the text  with thumbnails. It would be rather uneasy to explain such man that firstly it  is necessary to create the reduced copy of the image, then to insert it into  the document through the WYSIWYG-editor and after it to make a hyperlink to the  big image.</p>
+<p> So the actions have been simpified to the minimum вЂ“ when the big image  is inserted to the text and the sizes of the thumbnail are established the  plugin will create automatically the thumbnail with needed hyperlinks.</p>
 <p> Also while the opening of a document that has such images the thumbnails  will be displayed with a special watermark in the WYSIWYG-editor instead of the  big images. This watermark speaks conditionally that the given image is not  small image only but it is a hyperlink to the big image and it allows to tell  the difference between such images and the really small images that can be in  the document.</p>
 <p> If the sizes of the thumbnails is changed then in the next using of the  plugin will be created new thumbnails in compliance with new sizes.</p>
-<p> Of course you can use the plugin without the WYSIWYG-editor simply when  you insert the image as HTML-code and point the attributes “width” and “height”  that are smaller than the real sizes.</p>
+<p> Of course you can use the plugin without the WYSIWYG-editor simply when  you insert the image as HTML-code and point the attributes вЂњwidthвЂќ and вЂњheightвЂќ  that are smaller than the real sizes.</p>
 <h2>Installation</h2>
 <ul>
 	<li> Extract the contents of the zip file to your computer </li>
@@ -88,7 +88,7 @@ td
 	<li>Save </li>
 </ul>
 <h2>Plugin configuration</h2>
-<p>There are two parameters on the tab “Configuration” of the plugin settings page. The parameter  “Configuration” is the name of used configuration. The file with the same name  and the suffix “.config.php” should be placed in the plugin folder “configs”.  This parameter and the related file are mandatory. </p>
+<p>There are two parameters on the tab вЂњConfigurationвЂќ of the plugin settings page. The parameter  вЂњConfigurationвЂќ is the name of used configuration. The file with the same name  and the suffix вЂњ.config.phpвЂќ should be placed in the plugin folder вЂњconfigsвЂќ.  This parameter and the related file are mandatory. </p>
 <p>&quot;<em>Cache clear mode</em>&quot; option. Plugin cache is cleared when the system cache is cleared.</p>
 <ul>
 	<li> 0 - clearing is off</li>
@@ -112,10 +112,10 @@ td
 	<li>Install the plugin (see installation and plugin configuration above), make sure that there is drgalleries subfolder in assets  folder with write permissions.</li>
 	<li>Set one of the standart configuration in plugin configuration tab - slimbox, slidebox, lightboxv2, highslide</li>
 	<li>Make sure that the source image files are located in a folder assets/images or its subfolders</li>
-	<li>To force the plug to create thumbs and open images with selected effect,<strong> it's mandatory to set width and/or height for img tags equal width and height of thumbnail</strong>. I.e. for image <code>&lt;img src=&quot;assets/images/image.jpg&quot; width=&quot;120&quot; height=&quot;60&quot; /&gt;</code> will be genereated thumbnail with sizes 120х60. Naturally, the original image.jpg must exceed 120х60 size (otherwise there is no point in creating preview).</li>
+	<li>To force the plug to create thumbs and open images with selected effect,<strong> it's mandatory to set width and/or height for img tags equal width and height of thumbnail</strong>. I.e. for image <code>&lt;img src=&quot;assets/images/image.jpg&quot; width=&quot;120&quot; height=&quot;60&quot; /&gt;</code> will be genereated thumbnail with sizes 120С…60. Naturally, the original image.jpg must exceed 120С…60 size (otherwise there is no point in creating preview).</li>
 </ol>
 <h2>Parameters</h2>
-<p>Parameters to use in config file. File must be placed on \assets\plugins\directresize\configs folder with name ConfigName.config.php, where ConfigName is a string from “Configuration” field on the configuration tab of the plugin.</p>
+<p>Parameters to use in config file. File must be placed on \assets\plugins\directresize\configs folder with name ConfigName.config.php, where ConfigName is a string from вЂњConfigurationвЂќ field on the configuration tab of the plugin.</p>
 <table width="100%" border="0" cellpadding="0" cellspacing="1">
 	<tr>
 		<td width="20%" class="theader">Parameter </td>
@@ -132,10 +132,10 @@ td
 		<td>1</td>
 		<td>Mode of creation of big images and lightbox-links
 			<ul>
-				<li>1 – big image and lightbox-link to this image are created only if original image has <span class="label">drlightbox</span> label (about labels read <a href="#label">more below</a>)</li>
-				<li> 2 – big image and lightbox-link are created always (if it hasn’t any other conditions) </li>
+				<li>1 вЂ“ big image and lightbox-link to this image are created only if original image has <span class="label">drlightbox</span> label (about labels read <a href="#label">more below</a>)</li>
+				<li>В 2 вЂ“ big image and lightbox-link are created always (if it hasnвЂ™t any other conditions) </li>
 			</ul>
-			Despite of the value of parameter <strong>$lightbox_mode </strong>if it hasn’t any other conditions the thumbnails of images will create using all configured action for the thumbnails (overlaying water mark, cropping, etc.)</td>
+			Despite of the value of parameter <strong>$lightbox_mode </strong>if it hasnвЂ™t any other conditions the thumbnails of images will create using all configured action for the thumbnails (overlaying water mark, cropping, etc.)</td>
 	</tr>
 	<tr>
 		<td><strong>$allow_from</strong> </td>
@@ -171,10 +171,10 @@ td
 		<td>3</td>
 		<td>Method of image resizing. It is used while generating thumbnails. In all cases proportions of the image will be saved. imgWidth and imgHeight are parameters of the original image.
 			<ul>
-				<li>0 – firstly image is reduced, then it is cropped to fit in the rectangle imgWidth х imgHeight </li>
-				<li>1 – The height is calculated automatically from given width </li>
+				<li>0 вЂ“ firstly image is reduced, then it is cropped to fit in the rectangle imgWidth С… imgHeight </li>
+				<li>1 вЂ“ The height is calculated automatically from given width </li>
 				<li>2 - The width is calculated automatically from given height. </li>
-				<li>3 – The image is reduced so as not to exceed given imgWidth and imgHeight</li>
+				<li>3 вЂ“ The image is reduced so as not to exceed given imgWidth and imgHeight</li>
 			</ul></td>
 	</tr>
 	<tr>
@@ -200,7 +200,7 @@ td
 		<td>integer</td>
 		<td>800</td>
 		<td rowspan="2">&nbsp;
-			If the size of original image exceeds given sizes <strong>$big_width</strong> or <strong>$big_height</strong> it will generate image that is proportionally reduced from the original image (“big image” in the plugin terminology) with width and height that are not exceeded $big_width and $big_height.</td>
+			If the size of original image exceeds given sizes <strong>$big_width</strong> or <strong>$big_height</strong> it will generate image that is proportionally reduced from the original image (вЂњbig imageвЂќ in the plugin terminology) with width and height that are not exceeded $big_width and $big_height.</td>
 	</tr>
 	<tr>
 		<td><strong>$big_height</strong> </td>
@@ -231,13 +231,13 @@ td
 		<td>1</td>
 		<td>The rule for using width and height of thumbnails by default.
 			<ul>
-				<li>0 – Default width and  height are not used</li>
-				<li>1 – Width and height of thumbnail are became equal default width and height (<strong>$thumb_default_width</strong> and <strong>$thumb_default_height</strong>) if it is not specified neither height nor width of the original image.</li>
-				<li>2 – Width of thumbnail are became equal default width, if it is not specified width of the original image.</li>
-				<li>3 – Height of thumbnail became equal default height if it is not specified height of the original image </li>
-				<li>4 – Width and height of thumbnail forcibly are became equal default width and default height independent of it is specified or not in the original image. </li>
+				<li>0 вЂ“ Default width and  height are not used</li>
+				<li>1 вЂ“ Width and height of thumbnail are became equal default width and height (<strong>$thumb_default_width</strong> and <strong>$thumb_default_height</strong>) if it is not specified neither height nor width of the original image.</li>
+				<li>2 вЂ“ Width of thumbnail are became equal default width, if it is not specified width of the original image.</li>
+				<li>3 вЂ“ Height of thumbnail became equal default height if it is not specified height of the original image </li>
+				<li>4 вЂ“ Width and height of thumbnail forcibly are became equal default width and default height independent of it is specified or not in the original image. </li>
 			</ul>
-			<p>Notice: despite of the parameters <strong>$thumb_default_width</strong>, <strong>$thumb_default_height</strong> and  <strong>$thumb_default_sizemode </strong>the final sizes of generated thumbnail will calculate depending on <strong>$resize_method</strong> </p>
+			<p>Notice: despite of the parameters <strong>$thumb_default_width</strong>, <strong>$thumb_default_height</strong> and В <strong>$thumb_default_sizemode </strong>the final sizes of generated thumbnail will calculate depending on <strong>$resize_method</strong> </p>
 			<p>If you are  using force mode (4) together with TinyMCE,  width and height of source images in content will be replaced with <strong>$thumb_default_width</strong> and <strong>$thumb_default_height</strong>, original with and heigh will be lost after saving document. Its needed for correct displaying of thumbnails in visual mode.</p></td>
 	</tr>
 	<tr>
@@ -263,7 +263,7 @@ td
 				<li>russian </li>
 			</ul></td>
 		<td>english</td>
-		<td>It sets the plugin language. The corresponding language file should be placed in the folder “lang” of plugin.</td>
+		<td>It sets the plugin language. The corresponding language file should be placed in the folder вЂњlangвЂќ of plugin.</td>
 	</tr>
 	<tr>
 		<td><strong>$header</strong> </td>
@@ -279,8 +279,8 @@ td
 				<li>lightboxv2 </li>
 			</ul></td>
 		<td>&nbsp;</td>
-		<td><p>It includes necessary css and js files to the web page for corresponding script from the folder of MaxiGallery snippet (it is not necessarily to install this snippet but it’s files should be placed in the folder assets/snippets/maxigallery). </p>
-			<p> It is useful if you are using this plugin with Maxigallery in the same project. If any js or css files are attached already by MG, DirectResize won’t include these files again in the &lt;head&gt; section.</p></td>
+		<td><p>It includes necessary css and js files to the web page for corresponding script from the folder of MaxiGallery snippet (it is not necessarily to install this snippet but itвЂ™s files should be placed in the folder assets/snippets/maxigallery). </p>
+			<p> It is useful if you are using this plugin with Maxigallery in the same project. If any js or css files are attached alreadyВ by MG, DirectResize wonвЂ™t include these files again in the &lt;head&gt; section.</p></td>
 	</tr>
 </table>
 <p>Here are the parameters  taken from Maxigallery having the same meaning and processed in the same way.</p>
@@ -531,7 +531,7 @@ td
 	</tr>
 </table>
 <h2><a name="label" id="label"></a>Labels</h2>
-<p><em>Label</em> – in terminology of this plugin it is a special word (or part of word) that may use within the img tag at any place - within attributes class, alt, title and so on and it manages some actions with given image (and with it only).</p>
+<p><em>Label</em> вЂ“ in terminology of this plugin it is a special word (or part of word) that may use within the img tag at any place - within attributes class, alt, title and so on and it manages some actions with given image (and with it only).</p>
 <p>For example, if the value of parameter <strong>$lightbox_mode</strong> = 1 then the thumbnail with lightbox-link generates only for image with <span class="label">drlightbox</span> label.<br />
 	Examples of images with <span class="label">drlightbox</span> label: </p>
 <ul>
@@ -543,7 +543,7 @@ td
 	<li>and even <code>&lt;img src=&quot;image.jpg&quot; <span class="label">drlightbox</span> /&gt;</code></li>
 </ul>
 <p>Don't worry about validation errors in html code if you are used labels in unallowed places. All labels will be removed from output html. So avoid to name the image files with label names - filename or part of the filename can be replaced. <strong>Warning: </strong>don't use labels outside the attributes (as in last example) if you are using WYSIWYG-editor, because labels will be removed by an editor as incorrect html-code.</p>
-<p> Label <span class="label">drthumbonly</span>. It makes sense if only parameter <strong>$lightbox_mode</strong> = 2 and it shows that plugin should not generate big image and lightbox-link  for the given image but thumbnail only.</p>
+<p> Label <span class="label">drthumbonly</span>. It makes sense if only parameter <strong>$lightbox_mode</strong> = 2 and it shows that plugin should not generate big image and lightbox-link В for the given image but thumbnail only.</p>
 <p> If the value of parameter <strong>$lightbox_mode</strong> = 1 plugin generates the thumbnails without lightbox-link for all images, so using of <span class="label">drthumbonly</span> is redundant in that case<em>.</em></p>
 <p>Label <span class="label">drskip</span>. Plugin is skip  processing of the image. Thumbs and lightbox link is not created.</p>
 <h2>ToDo</h2>
@@ -558,7 +558,7 @@ td
 <p>* bug with duplicate names in the same document<br />
 	* bug with using DirectResize and MaxiGallery in the same document<br />
 	*  if lightbox word is used in template (rel=&quot;lightbox&quot;) plugin removes it  from output html as label name (see readme). So label names was changed  to drlightbox and drthumbonly <br />
-	* bug causing the message &quot;Fatal  error: Call to undefined function: size() in  ...assets\plugins\directresize\directResize.php on line 141&quot; (if file  is not exist by path taken from img tag)<br />
+	*В bug causing the message &quot;Fatal  error: Call to undefined function: size() in  ...assets\plugins\directresize\directResize.php on line 141&quot; (if file  is not exist by path taken from img tag)<br />
 	* big image and lightbox link is not created when using lightbox_mode = 1 and &quot;drlightbox&quot; label <br />
 	+ add new label - drskip. Images with this label is not processed by plugin.<br />
 	* bug with gif-images on the page<br />
