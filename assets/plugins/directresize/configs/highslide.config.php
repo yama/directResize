@@ -32,7 +32,7 @@ $lightbox_mode = 2;
 // Very important parameter - paths to folders, where the images will be proccesed. Use comma as separator. You can use remote paths with http://.
 $allow_from="assets/images";
 
-// Method for thumbs generating. 0 means that firstly image is reduced, then it is cropped to fit in the rectangle thumb width õ thumb height.
+// Method for thumbs generating. 0 means that firstly image is reduced, then it is cropped to fit in the rectangle thumb width x thumb height.
 $resize_method = 0;
 
 

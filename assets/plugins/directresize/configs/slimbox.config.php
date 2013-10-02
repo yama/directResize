@@ -15,7 +15,7 @@ $header  = 	'
 									
 /*
 Uncomment the line below if you use Maxigallery with slimbox effect in the same site
-Раскомментируйте строку ниже, если вы используете Maxigallery с эффектом slimbox на одном сайте
+Р Р°СЃРєРѕРјРјРµРЅС‚РёСЂСѓР№С‚Рµ СЃС‚СЂРѕРєСѓ РЅРёР¶Рµ, РµСЃР»Рё РІС‹ РёСЃРїРѕР»СЊР·СѓРµС‚Рµ Maxigallery СЃ СЌС„С„РµРєС‚РѕРј slimbox РЅР° РѕРґРЅРѕРј СЃР°Р№С‚Рµ
 */
 //$maxigallery_jscss_packs = "slimbox";
 

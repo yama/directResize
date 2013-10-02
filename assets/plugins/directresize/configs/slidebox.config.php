@@ -28,7 +28,7 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src="'.DIRECTRESIZE_
 						
 /*
 Uncomment the line below if you use Maxigallery with slidebox effect in the same site
-Раскомментируйте строку ниже, если вы используете Maxigallery с эффектом slidebox на одном сайте
+Р Р°СЃРєРѕРјРјРµРЅС‚РёСЂСѓР№С‚Рµ СЃС‚СЂРѕРєСѓ РЅРёР¶Рµ, РµСЃР»Рё РІС‹ РёСЃРїРѕР»СЊР·СѓРµС‚Рµ Maxigallery СЃ СЌС„С„РµРєС‚РѕРј slidebox РЅР° РѕРґРЅРѕРј СЃР°Р№С‚Рµ
 */
 //$maxigallery_jscss_packs = "slidebox";
 
