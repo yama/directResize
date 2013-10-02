@@ -852,7 +852,7 @@ function RenderOnFrontend($o, $config)
 
 	if (isset($config)) include_once $modx->config['base_path'].DIRECTRESIZE_PATH."configs/$config.config.php";
 	
-	$drconfig['allow_from'] = isset($allow_from) ? $allow_from : (isset($deny_from) ? NULL : "assets/images");
+	$drconfig['allow_from'] = isset($allow_from) ? $allow_from : (isset($deny_from) ? NULL : $modx->config['rb_base_url'].'images');
 	$drconfig['deny_from'] = isset($deny_from) && !isset($allow_from) ? $deny_from : NULL;
 	$drconfig['resize_method'] = isset($resize_method) ? $resize_method : 3;
 	$drconfig['big_quality'] = isset($big_quality) ? $big_quality : 80;

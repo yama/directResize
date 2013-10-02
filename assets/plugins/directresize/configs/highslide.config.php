@@ -30,7 +30,7 @@ $lightbox_mode = 2;
 //$thumb_watermark_type = "image";
 
 // Very important parameter - paths to folders, where the images will be proccesed. Use comma as separator. You can use remote paths with http://.
-$allow_from="assets/images";
+$allow_from=$modx->config['rb_base_url'].'images';
 
 // Method for thumbs generating. 0 means that firstly image is reduced, then it is cropped to fit in the rectangle thumb width x thumb height.
 $resize_method = 0;

@@ -34,7 +34,7 @@ Uncomment the line below if you use Maxigallery with slidebox effect in the same
 
 $lightbox_mode = 2;
 
-$allow_from="assets/images";
+$allow_from=$modx->config['rb_base_url'].'images';
 
 $resize_method = 0;
 ?>
